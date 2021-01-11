@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<main>
+    <section>
+        <div class="row mt-5 row-cols-1 row-cols-md-3 g-4">
+          {% for pet in pet_list %}
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://via.placeholder.com/1080x720.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{pet}}</h5>
+                  <p class="card-text">likes, share</p>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+          <!-- 
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://via.placeholder.com/1080x720.png" class="card-img-top" alt="...">
+                <div id="body" class="card-body">
+                  <h5 class="card-title">Pet Name</h5>
+                  <p class="card-text">Likes Share</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://via.placeholder.com/1080x720.png"class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Likes Share</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <img src="https://via.placeholder.com/1080x720.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Likes Share</p>
+                </div>
+              </div>
+            </div> -->
+        </div>
+    </section>
+</main>
+{% endblock content %}
