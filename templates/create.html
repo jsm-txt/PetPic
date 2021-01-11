@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <h1>New Pet</h1>
+
+    <form method='POST'>
+        <fieldset>
+            <legend>Please fill out your pet info:</legend>
+
+            <label>
+                Pet's name:
+                <input type="text" name="pet_name">
+            </label>
+            
+            <label>
+                Pet's photo URL:
+                <input type="url" name="photo">
+            </label>
+
+            <input type="submit" class="submit" value="Submit!">
+        </fieldset>
+    </form>
+</main>
+
+{% endblock content %}

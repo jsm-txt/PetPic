@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<main>
+    <!-- Profile image and info -->
+    <section>
+        <div class="container-fluid mt-5 bg-whitesmoke"> 
+            <div class="card-group bg-white mr-5 ml-5">
+                <div class="card bg-white col-5">
+                    <img src="{{pet.photo_url}}" class="card-img-top rounded mx-auto d-block" alt="...">
+                </div>
+
+                <div class="card bg-white">
+                    <div class="card-body">
+                        <h3 class="card-title">{{pet.name}}</h3>
+                        <p class="card-text p-2">{{text}}</p>
+                        <a href="/images/{{pet._id}}" class="btn btn-primary">Add images to profile</a>
+                        <a href="/images/{{pet._id}}" class="btn btn-primary">Remove images from profile</a>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+
+    <section>
+        <div class="row mt-5 row-cols-1 row-cols-md-3 g-4">
+        {% for picture in pet_pictures %}{{picture.pet_pictures}}
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{picture.pet_pictures}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{pet.name}}</h5>
+                  <p class="card-text">likes, share</p>
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+
+
+
+</main>
+{% endblock content %}
