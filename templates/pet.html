@@ -15,7 +15,7 @@
                         <h3 class="card-title">{{pet.name}}</h3>
                         <p class="card-text p-2">{{text}}</p>
                         <a href="/images/{{pet._id}}" class="btn btn-primary">Add images to profile</a>
-                        <a href="/images/{{pet._id}}" class="btn btn-primary">Remove images from profile</a>
+                        <a href="/remove/{{pet._id}}" class="btn btn-primary">Remove images from profile</a>
                     </div>
                 </div>
             </div>
@@ -24,7 +24,7 @@
 
     <section>
         <div class="row mt-5 row-cols-1 row-cols-md-3 g-4">
-        {% for picture in pet_pictures %}{{picture.pet_pictures}}
+        {% for picture in pet_pictures %}
             <div class="col">
               <div class="card h-100">
                 <img src="{{picture.pet_pictures}}" class="card-img-top" alt="...">

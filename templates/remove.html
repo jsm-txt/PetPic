@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<main>
+
+    <section>
+        <div class="row mt-5 row-cols-1 row-cols-md-3 g-4">
+        {% for picture in pet_pictures %}
+            <div class="col">
+              <div class="card h-100">
+                <img src="{{picture.pet_pictures}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{pet.name}}</h5>
+                    <p class="card-text">likes, share</p>
+
+                    <form method ='POST'>
+                        <input type="hidden" value="{{picture._id}}" name ="delete" >
+                        <button class="btn btn-outline-warning" type="submit">Delete</button>
+                    </form>
+
+                </div>
+              </div>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+
+</main>
+{% endblock content %}
