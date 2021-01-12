@@ -2,19 +2,24 @@
 {% block content %}
 
 <main>
-    <h1>Pet images</h1>
+    <h1>Profile</h1>
 
     <form method='POST'>
         <fieldset>
-            <legend>New image:</legend>
+            
 
             <label>
-                Pet's photo URL:
+                Your profile Picture:
                 <input type="url" name="photo">
             </label>
-            
+
             <label>
-                Photo Caption:
+                Username:
+                <input type="text" name="username">
+            </label>
+
+            <label>
+                About you:
                 <input type="text" name="caption">
             </label>
 

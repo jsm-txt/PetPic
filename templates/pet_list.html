@@ -9,16 +9,16 @@
       <div class="card-group bg-white mr-5 ml-5">
         <div class="card bg-white col-5">
             
-                <img src="https://via.placeholder.com/1080x720.png" class="card-img-top rounded mx-auto d-block" alt="...">
+                <img src="{{profile.profile_picture}}" class="card-img-top rounded mx-auto d-block" alt="...">
         
         </div>
 
         <div class="card bg-white">
             <div class="card-body">
-              <h3 class="card-title">{{username}}</h3>
-              <p class="card-text p-2">{{text}}</p>
+              <h3 class="card-title">{{profile.username}}</h3>
+              <p class="card-text p-2">{{profile.text}}</p>
               
-              <a href="#" class="btn btn-primary">Edit your profile</a>
+              <a href="/edit_profile" class="btn btn-primary">Edit your profile</a>
             </div>
         </div>
       </div>

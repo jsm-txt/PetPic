@@ -2,25 +2,37 @@
 {% block content %}
 
 <main>
-    <h1>New Pet</h1>
+    
+    <div class="card mt-5 mr-auto ml-auto" id="form" >
+        <div class="card-header" id="form_header">
+            <h1>Edit Profile</h1>
+        </div>
+        <div class="card-body">
+            <form method='POST'>
+            <fieldset>
+                    <div class="col-8 mb-3">
+                        <label class="form-label">Pet's name</label>
+                        <input type="text" name="pet_name" class="form-control" placeholder="Max">
+                    </div>
+                    <div class="col-8 mb-3">
+                        <label  class="form-label">About pet: </label>
+                        <textarea type="text" name="about_pet" class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="col-8 mb-3">
+                        <label  class="form-label">Pet's profile image: </label>
+                        <input type="url" name="photo" class="form-control">
+                    </div>
+                    <div class="col-3 mb-3">
+                        <button type="submit "class="btn btn-success">Done</button>
+                    </div>
+                    
+            </fieldset>
+        </form>  
+        </div>
+    </div>
+    
 
-    <form method='POST'>
-        <fieldset>
-            <legend>Please fill out your pet info:</legend>
-
-            <label>
-                Pet's name:
-                <input type="text" name="pet_name">
-            </label>
-            
-            <label>
-                Pet's photo URL:
-                <input type="url" name="photo">
-            </label>
-
-            <input type="submit" class="submit" value="Submit!">
-        </fieldset>
-    </form>
+    
 </main>
 
 {% endblock content %}
