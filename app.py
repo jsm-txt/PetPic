@@ -79,7 +79,7 @@ def remove(pet_id):
 
         return redirect(url_for('pet', pet_id= pet_id))
     else:
-        
+
         pet_display = mongo.db.pet.find_one({'_id': ObjectId(pet_id)})
         pet_images = mongo.db.pet_pictures.find({'pet_id': pet_id})
         context = {
@@ -87,6 +87,25 @@ def remove(pet_id):
                     'pet_pictures' : pet_images
                 }
         return render_template('remove.html', **context)
+
+@app.route('/delete', methods=['GET', 'POST'])
+def delete():
+    if request.method == 'POST':
+    
+        pet_id = request.form.get("delete")
+        
+        mongo.db.pet.delete_one({'_id': ObjectId(pet_id)})
+
+        return redirect(url_for('pet_list'))
+    else:
+        
+        pet_data = mongo.db.pet.find()
+
+        context = {
+            'pet_list' : pet_data
+        }
+
+        return render_template('remove_pet.html', **context)
 
 if __name__ == '__main__':
     app.run(debug=True)
