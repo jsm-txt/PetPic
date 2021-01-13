@@ -2,25 +2,29 @@
 {% block content %}
 
 <main>
-    <h1>Pet images</h1>
-
-    <form method='POST'>
-        <fieldset>
-            <legend>New image:</legend>
-
-            <label>
-                Pet's photo URL:
-                <input type="url" name="photo">
-            </label>
-            
-            <label>
-                Photo Caption:
-                <input type="text" name="caption">
-            </label>
-
-            <input type="submit" class="submit" value="Submit!">
-        </fieldset>
-    </form>
+    <div class="card mt-5 mr-auto ml-auto" id="form" >
+        <div class="card-header" id="form_header">
+            <h1>Pet Images</h1>
+        </div>
+        <div class="card-body">
+            <form method='POST'>
+            <fieldset>
+                    <div class="col-8 mb-3">
+                        <label  class="form-label">Caption </label>
+                        <textarea type="text" name="caption" class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="col-8 mb-3">
+                        <label  class="form-label">Pet's photo URL: </label>
+                        <input type="url" name="photo" class="form-control">
+                    </div>
+                    <div class="col-3 mb-3">
+                        <button type="submit "class="btn btn-success">Done</button>
+                    </div>
+                    
+            </fieldset>
+        </form>  
+        </div>
+    </div>
 </main>
 
 {% endblock content %}

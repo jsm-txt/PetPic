@@ -2,30 +2,33 @@
 {% block content %}
 
 <main>
-    <h1>Profile</h1>
-
-    <form method='POST'>
-        <fieldset>
-            
-
-            <label>
-                Your profile Picture:
-                <input type="url" name="photo">
-            </label>
-
-            <label>
-                Username:
-                <input type="text" name="username">
-            </label>
-
-            <label>
-                About you:
-                <input type="text" name="caption">
-            </label>
-
-            <input type="submit" class="submit" value="Submit!">
-        </fieldset>
-    </form>
+    <div class="card mt-5 mr-auto ml-auto" id="form" >
+        <div class="card-header" id="form_header">
+            <h1>Your Profile</h1>
+        </div>
+        <div class="card-body">
+            <form method='POST'>
+            <fieldset>
+                    <div class="col-8 mb-3">
+                        <label class="form-label">Username: </label>
+                        <input type="text" name="username" class="form-control" placeholder="JeremyR">
+                    </div>
+                    <div class="col-8 mb-3">
+                        <label  class="form-label">About you: </label>
+                        <textarea type="text" name="caption" class="form-control" rows="2"></textarea>
+                    </div>
+                    <div class="col-8 mb-3">
+                        <label  class="form-label">Your profile Picture </label>
+                        <input type="url" name="photo" class="form-control">
+                    </div>
+                    <div class="col-3 mb-3">
+                        <button type="submit "class="btn btn-success">Done</button>
+                    </div>
+                    
+            </fieldset>
+        </form>  
+        </div> 
+    </div>
 </main>
 
 {% endblock content %}

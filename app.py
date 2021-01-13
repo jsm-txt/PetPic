@@ -102,7 +102,6 @@ def remove(pet_id):
     if request.method == 'POST':
     
         picture_id = request.form.get("delete")
-        print(picture_id)
         mongo.db.pet_pictures.delete_one({'_id': ObjectId(picture_id)})
 
         return redirect(url_for('pet', pet_id= pet_id))

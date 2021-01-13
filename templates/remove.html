@@ -11,7 +11,7 @@
               <div class="card h-100">
                 <img src="{{picture.pet_pictures}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <p class="card-text">{{}}</p>
+                    <p class="card-text">{{picture.caption}}</p>
 
                     <form method ='POST'>
                         <input type="hidden" value="{{picture._id}}" name ="delete" >
